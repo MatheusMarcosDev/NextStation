@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Game_Controller : MonoBehaviour
 {
@@ -32,8 +33,8 @@ public class Game_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        idFase = 0;
 
+        idFase = 0;
         animacaoGarotoOff.enabled = true;
         animacaoGarotoOn.enabled = false;
         animacaoGarotaOff.enabled = true;
@@ -91,7 +92,16 @@ public class Game_Controller : MonoBehaviour
 
     public void Proximo()
     {
-        idFase += 1;
+        if (idFase < 3)
+        {
+            idFase += 1;
+        }
+
+        else
+        {
+            SceneManager.LoadScene("Verao");
+        }
+
     }
 
     public  void    Dialogo()
