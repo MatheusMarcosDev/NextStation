@@ -33,7 +33,6 @@ public class Game_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         idFase = 0;
         animacaoGarotoOff.enabled = true;
         animacaoGarotoOn.enabled = false;
